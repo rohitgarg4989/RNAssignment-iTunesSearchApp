@@ -10,9 +10,11 @@ import {
 import mapActions from '../redux/actions/mapActions';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {Image, SearchBar, Text} from 'react-native-elements';
+import {SearchBar, Text} from 'react-native-elements';
+import FastImage from 'react-native-fast-image'
 
-const DashBoard = ({navigation, executeGetSearchRequest, searchResponse}) => {
+
+const Search = ({navigation, executeGetSearchRequest, searchResponse}) => {
   const [searchTextState, setSearchTextState] = React.useState('');
   const [selectedEntityState] = React.useState('song');
 
@@ -62,10 +64,10 @@ const DashBoard = ({navigation, executeGetSearchRequest, searchResponse}) => {
               <TouchableOpacity
                 style={styles.listItemContainer}
                 onPress={() => onListItemClick(item)}>
-                <Image
+                <FastImage
                   style={styles.imageThumbnail}
                   source={{uri: item.artworkUrl100}}
-                  PlaceholderContent={<ActivityIndicator />}
+                  onProgress={() => <ActivityIndicator />}
                 />
               </TouchableOpacity>
             )}
@@ -114,5 +116,5 @@ const mapDispatchToProps = (dispatch) => {
 const ConnectedComponent = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(DashBoard);
+)(Search);
 export default ConnectedComponent;

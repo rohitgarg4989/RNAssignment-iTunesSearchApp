@@ -12,7 +12,7 @@ import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import DashBoard from './src/screens/DashBoard';
+import Search from './src/screens/Search';
 import Details from './src/screens/Details';
 import store from './src/redux/store';
 
@@ -22,8 +22,8 @@ function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="DashBoard">
-          <Stack.Screen name="DashBoard" component={DashBoard} />
+        <Stack.Navigator initialRouteName="Search">
+          <Stack.Screen name="Search" component={Search} />
           <Stack.Screen name="Details" component={Details} />
         </Stack.Navigator>
       </NavigationContainer>
