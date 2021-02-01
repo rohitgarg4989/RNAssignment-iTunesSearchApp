@@ -30,8 +30,5 @@ Clone or download the repo & execute in the root project folder:
 
 ### Build & Run
 
-Execute in the root project folder: 
-react-native start
-
-Once completed, start the iOS Simulator and run:
+Once completed, execute in the root project folder::
 react-native run-ios
