@@ -23,8 +23,8 @@ Implemented an sample React Native mobile app to display iTunes search functiona
 
 Clone or download the repo & execute in the root project folder:
 
-1. git clone <https://github.com/rohitgarg4989/MobileCodingChallengeApp.git>
-2. cd MobileCodingChallengeApp
+1. git clone <https://github.com/rohitgarg4989/RNAssignment-iTunesSearchApp.git>
+2. cd RNAssignment-iTunesSearchApp
 3. npm install
 4. cd ios && pod install 
 
